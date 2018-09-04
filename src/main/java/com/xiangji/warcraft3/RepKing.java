@@ -7,8 +7,8 @@ import java.util.zip.DataFormatException;
 
 public class RepKing {
     public static void main(String[] args) throws IOException, W3GException, DataFormatException {
-
-        Replay replay = new Replay(new File("/Users/xiangji/Dropbox/REPLAY/01_08_38_946.nwg"));
+        Replay replay = new Replay(new File(args[0]));
+        //Replay replay = new Replay(new File("/Users/xiangji/git/WarcraftRepKing/replays/01_08_38_946.nwg"));
 
         Header header = replay.getHeader();
         System.out.println("版本：1." + header.getVersionNumber() + "." + header.getBuildNumber());
